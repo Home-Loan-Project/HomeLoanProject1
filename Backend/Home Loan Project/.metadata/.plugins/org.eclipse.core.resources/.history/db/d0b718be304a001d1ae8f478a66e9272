@@ -1,0 +1,26 @@
+package com.cjc.homeloanproject.app.model;
+
+import javax.persistence.Id;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class Guarantor
+
+{
+	@Id
+	private Integer Id;
+	private String guarantorFname;
+	private String guarantorMname; 
+	private String customerLname;
+	private String dateofBirth;
+	private Integer customerAge;
+	private String customerGender;
+	private String customerEmail;
+	private String customerMobNo;
+	
+
+}

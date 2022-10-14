@@ -1,0 +1,31 @@
+package com.cjc.homeloanproject.app.service;
+
+import java.util.List;
+
+import com.cjc.homeloanproject.app.model.AllPersonDocument;
+import com.cjc.homeloanproject.app.model.Customer;
+
+public interface HomeLoanServiceI {
+
+	public List<Customer> getCustomer();
+
+	
+
+	public Customer PostCustomer(Customer c);
+	public Customer updateCustomer(int id, Customer p);
+
+
+
+	public void delete(int customerId);
+
+
+
+	public List<Customer> saveDocument(AllPersonDocument doc);
+
+
+
+	
+
+
+
+}

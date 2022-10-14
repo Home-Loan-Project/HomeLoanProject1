@@ -1,0 +1,43 @@
+package com.cjc.homeloanproject.app.service;
+
+import java.util.List;
+
+import com.cjc.homeloanproject.app.model.Address;
+import com.cjc.homeloanproject.app.model.AllPersonDocument;
+import com.cjc.homeloanproject.app.model.Customer;
+import com.cjc.homeloanproject.app.model.Guarantor;
+
+public interface HomeLoanServiceI {
+
+	public List<Customer> getCustomer();
+	public Customer PostCustomer(Customer c);
+	public Customer updateCustomer(int id, Customer p);
+	public void delete(int customerId);
+	
+	////////////All Person Document///////////////////////
+	public List<AllPersonDocument> saveDocument(AllPersonDocument document);
+	
+	//***************Guarantor********************
+	public List<Guarantor> getGuranter();
+	public Guarantor saveGauranter(Guarantor p);
+	public void deleteGuranter(Integer guranterId);
+	public Guarantor updateGuarantor(Integer guranterId, Guarantor p);
+	public List<Guarantor> saveAllDocument(Guarantor document);
+
+	//////////Address////
+
+	public Address PostCustomer(Address a);
+	public List<Address> getAddress();
+	public Address updateCustomerAddress(int customerAddrId, Address a);
+
+
+
+	
+
+
+
+	
+
+
+
+}

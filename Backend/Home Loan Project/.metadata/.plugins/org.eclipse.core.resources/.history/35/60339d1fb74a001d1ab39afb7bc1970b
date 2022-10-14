@@ -1,0 +1,33 @@
+package com.cjc.homeloanproject.app.model;
+
+import java.util.Date;
+
+import javax.persistence.Id;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class Customer
+{
+	@Id
+	private Integer customerId;
+	private String customerFname;
+	private String customerMname; 
+	private String customerLname;
+	private String dateofBirth;
+	private Integer customerAge;
+	private String customerGender;
+	private String customerEmail;
+	private String customerMobNo;
+	private Double customerAmountPaidForHome;
+	private Double LoanRequired;
+	private boolean previousLoan;
+	
+	
+	
+
+}

@@ -1,0 +1,44 @@
+package com.cjc.homeloanproject.app.serviceImpl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.cjc.homeloanproject.app.model.Customer;
+import com.cjc.homeloanproject.app.repository.HomeLoanRepository;
+import com.cjc.homeloanproject.app.service.HomeLoanServiceI;
+@Service
+public class HomeLoanServiceImpl implements HomeLoanServiceI
+{
+	@Autowired
+	HomeLoanRepository hlr;
+
+	@Override
+	public List<Customer> getCustomer()
+	{
+		List<Customer> list=hlr.findAll();
+		
+		return list;
+	}
+
+	@Override
+	public Customer PostCustomer(Customer c)
+	{
+		Customer cust=hlr.save(c);
+		return cust;
+	}
+
+	@Override
+	public Customer updateCustomer(Customer c)
+	{
+		Customer cust=hlr.save(c);
+
+		return cust;
+	}
+
+	
+	
+	
+
+}
